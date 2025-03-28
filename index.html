@@ -1,306 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-  </head>
-
-  <body>
-    <!--Navigation on desktop screen-->
-    <nav id="desktop-nav">
-      <div class="logo">Quenie Ann</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container navbar-container">
+            <div>
+                <a href="#home" class="logo">Quenie<span>Ann</span></a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!--Navigation on small screen-->
-    <nav id="hamburger-nav">
-      <div class="logo">Quenie Ann</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="home-content">
+                <div class="home-image">
+                    <img src="assets/ppic1.png" alt="Profile Picture">
+                </div>
+                <div class="home-text">
+                    <h2>Hi there!</h2>
+                    <h1>I'm Quenie Ann Abragan</h1>
+                    <h3>Aspiring Full-Stack Developer</h3>
+                    <p>Currently studying the wild world of code.</p>
+                    <div class="home-buttons">
+                        <button class="btn btn-accent" onclick="window.open('assets/Abragan-CV.pdf')"><b>Download CV</b></button>
+                        <button class="btn btn-outline" onclick="location.href='#contact'">Contact Info</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-
-    <!--Profile Section-->
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="assets/profile1.png" alt="Profile Picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Quenie Ann Abragan</h1>
-        <p class="section__text__p2">Aspiring Full-Stack Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
-          <img
-            src="assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Quenie-Ann'"
-          />
-        </div>
-      </div>
     </section>
-    <!--END of Profile Section-->
 
-    <!--About Section-->
+    <!-- About Section -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="assets/profile2.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Aspiring Full-Stack Developer</p>
+                    <p>I’m a dedicated learner building expertise in web development and database systems, currently strengthening my foundation in both front-end and back-end technologies.</p>
+                    <p>Web Development: HTML/CSS, Basic JavaScript, and Responsive Design</p>
+                    <p>Databases: Currently learning PostgreSQL (querying, relational design)</p>
+                    <p>Tools: Git/GitHub, VS Code, Supabase</p>
+                    <p>When I'm not coding, you can find me reading novels, watching programming memes, or watching action sci-fi movies.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/profile2.png" alt="About Me Image">
+                </div>
             </div>
-            <div class="details-container">
-              <img
-                src="assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.S. in Information Technology<br>Undergraduate Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Details about my Education and other work experience, skills training etc..
-            </p>
-          </div>
         </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
     </section>
-    <!--END of About Section-->
 
-    <!--Experience Section-->
+    <!-- Skills Section -->
     <section id="skills">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="skills-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="skills-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Intermediate</p>
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup and accessibility</p>
+                    <p>Intermediate</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Intermediate</p>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Modern layouts with Flexbox and Grid</p>
+                    <p>Intermediate</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>ES6+ features and functional programming</p>
+                    <p>Basic</p>
                 </div>
-              </article>
+                <div class="skill-item">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git</h3>
+                    <p>Version control and collaboration</p>
+                    <p>Intermediate</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <h3>PostgreSQL</h3>
+                    <p>Database design and management</p>
+                    <p>Intermediate</p>
+                </div>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="skills-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="assets/checkmark.png"
-                  alt="skills icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
         </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
     </section>
-    <!--END of Experience Section-->
 
-    <!--Projects Section-->
+    <!-- Projects Section -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="skills-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets/social-media-page.png"
-                alt="Social Media"
-                class="project-img"
-              />
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/social-media-page.png" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Social Media Page</h3>
+                        <p>A fully responsive Social Media Page built with HTML5, CSS3, and JavaScript.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/Quenie-Ann/Social-Media" class="btn btn-outline">GitHub</a>
+                            <a href="https://social-media-beta-seven.vercel.app/" class="btn btn-accent">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h2 class="skills-sub-title project-title">Social Media Page</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Quenie-Ann/Social-Media  '"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://social-media-beta-seven.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
     </section>
-    <!--END of Projects Section-->
 
-    <!--Contact Section-->
+    <!-- Contact Section -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:abragan.quenieann@gmail.com">abragan.quenieann@gmail.com</a></p>
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-form">
+                <form action="mailto:quenieabragan@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" placeholder="How can I help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-accent">Send Message</button>
+                </form>
+            </div>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        </div>
-      </div>
     </section>
-    <!--END of Contact Section-->
 
+    <!-- Footer -->
     <footer>
-      <p>2025 Quenie Ann H. Abragan</p>
+        <div class="container">
+            <p style="color: white;">&copy; 2025 Quenie Ann Abragan. All rights reserved.</p>
+            <div class="social-links">
+                <a href="mailto:quenieabragan@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/Quenie-Ann" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
-  </body>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Active section detection
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').includes(current)) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
