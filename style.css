@@ -198,6 +198,11 @@ nav {
       align-items: center;
       padding: 15px 20px;
   }
+  /* Ensure hamburger stays on right */
+  .navbar-container ul {
+    justify-content: right;
+    margin-left: 70% !important;
+  }
 
   .menu-toggle {
       display: block;
@@ -215,7 +220,7 @@ nav {
       max-width: 200px;
       background: white;
       flex-direction: column;
-      padding: 10px 0;
+      padding: 5px 0;
       border-radius: 8px;
       box-shadow: 0 5px 15px rgba(84, 93, 80, 0.2);
       transform: scale(0.95);
@@ -223,6 +228,9 @@ nav {
       visibility: hidden;
       transition: all 0.2s ease-out;
       z-index: 1000;
+  }
+  .nav-links ul{
+    list-style: none;
   }
 
   .nav-links.active {
@@ -232,7 +240,7 @@ nav {
   }
 
   .nav-links li {
-      margin: 0;
+      margin: 0 !important;
       width: 100%;
   }
 
@@ -253,13 +261,7 @@ nav {
       display: none;
   }
 
-  /* Ensure hamburger stays on right */
-  .navbar-container {
-      justify-content: right;
-  }
 }
-
-
 
 /* Home Section */
 #home {
